@@ -39,6 +39,7 @@
   \endgroup
 }
 
+
   % Define Layout Environment
 \newcommand{\topinfo}{
   \begin{center}
