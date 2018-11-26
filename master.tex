@@ -1,28 +1,30 @@
 \documentclass{my-cv}
 
-\begin{document}
-\pagenumbering{gobble}          % No page numbering
+\author{David Jos\'{e} da Rocha Marques}
+\title{Curriculum Vitae}
+\date{\today{}}
 
+\begin{document}
+
+\pagenumbering{gobble}          % No page numbering
+\topinfo
 
 \begin{tabular}[!ht]{c|l}
-\begin{minipage}[!ht]{.3\linewidth}
+\begin{minipage}[!ht]{.35\linewidth}
+    \includegraphics[width=\textwidth]{figures/personal} % Picture
 
-  \personalinfo
-  {David Marques}
-  {davidmarques856@gmail.com}   % Mail
-  {962 154 064}                 % Number
-  {1}                           % Address
+    % Here is the info
+    \phone{+351 962 154 064}
+    \email{davidmarques856@gmail.com}
 
 \end{minipage}&
-\begin{minipage}[!ht]{.7\linewidth}
+\begin{minipage}[!ht]{.65\linewidth}
 
   % Education Bit
   \begin{education}
     \entry{Mechanical Engineering Masters}{2011-2018}
-
   \end{education}
 \end{minipage}
 \end{tabular}
 
 \end{document}
-

@@ -26,17 +26,39 @@
   {}                           % Can be used to insert code before the heading
   [\titlerule]   
 
+% Some symbols
+\RequirePackage{marvosym}
+
+% Author Macros
+\RequirePackage{titling}
+
+% Images with the height of the text
+\newcommand{\mychar}{%
+  \begingroup\normalfont
+  \includegraphics[height=\fontcharht\font`\B]{picture.png}%
+  \endgroup
+}
 
   % Define Layout Environment
+\newcommand{\topinfo}{
+  \begin{center}
+  {\Huge \bfseries \theauthor}\\
+  {\Large \bfseries \color{gray} Mechanical Engineer}
+  \end{center}
+  }
 
-  % Define Personal Info Environment
-  \newcommand{\personalinfo}[4]{
-    \includegraphics[width=\textwidth]{figures/personal}
-    #1 \\
-    {\small #2} \\
-    #3 \\
-    #4 \\
-  }                        
+  % Personal Info
+  \newcommand{\phone}[1]{\Mobilefone: #1\\}
+  \newcommand{\email}[1]{\Email: #1}
+
+
+
+  
+
+  
+
+
+
 
   % define Education Env
   \newenvironment{education}{
