@@ -24,7 +24,7 @@
 
 \newcommand\score[1]{
 \pgfmathsetmacro\pgfxa{#1+1}
-\tikzstyle{scorestars}=[star, star points=4, star point ratio=2.25, draw,inner sep=1.3pt,anchor=outer point 3]
+\tikzstyle{scorestars}=[star, star points=3, star point ratio=2.25, draw,inner sep=1.3pt,anchor=outer point 3]
   \begin{tikzpicture}[baseline]
     \foreach \i in {1,...,5} {
         \pgfmathparse{(\i<=#1?"red":"gray!40!white")}
@@ -69,7 +69,6 @@
   \newcommand{\phone}[1]{\Mobilefone: #1\\}
   \newcommand{\email}[1]{\Email: #1}
 
-
   % Environment for like Education and Hobbies and wtv
   \newenvironment{cvpart}[1]{
     \section{#1}
@@ -78,7 +77,8 @@
   }
 
   \newenvironment{skills}[1]{
-    {\hspace{-4mm}\large\color{red}\bfseries#1}
+    \vspace{5mm}
+    {\hspace{-5mm}\vspace{1mm}\Large\color{red}\bfseries#1}
 
     \newcommand{\skillentry}[2]{
       \begin{tabular}{m{.5\linewidth}l}
