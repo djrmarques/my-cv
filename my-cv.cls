@@ -53,22 +53,14 @@
   \newcommand{\email}[1]{\Email: #1}
 
 
-
-  
-
-  
-
-
-
-
   % define Education Env
-  \newenvironment{education}{
-    \section{Education}
-
+  \newenvironment{cvpart}[1]{
+    \section{#1}
     \newcommand{\entry}[2]{##1 \hdashrule[.5ex]{7cm}{1pt}{1pt} ##2 }
 
   }
 
-
-  % define Skills Env
+  \newcommand{\sep}[1]{{
+   \vspace{2mm}   \large \color{red} \bfseries #1}
+  }
 
