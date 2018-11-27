@@ -6,6 +6,9 @@
 % Define the colors
 \RequirePackage{xcolor}
 
+% Array for tabular
+\RequirePackage{array}
+
 % Images
 \RequirePackage{graphicx}
 
@@ -15,7 +18,21 @@
 % Dashed Rule
 \RequirePackage{dashrule}
 
-\newcommand{\headlinecolor}{\normalcolor}
+  % STARS
+\RequirePackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\newcommand\score[1]{
+\pgfmathsetmacro\pgfxa{#1+1}
+\tikzstyle{scorestars}=[star, star points=4, star point ratio=2.25, draw,inner sep=1.3pt,anchor=outer point 3]
+  \begin{tikzpicture}[baseline]
+    \foreach \i in {1,...,5} {
+        \pgfmathparse{(\i<=#1?"red":"gray!40!white")}
+        \edef\starcolor{\pgfmathresult}
+        \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+   }
+  \end{tikzpicture}
+}
 
 % Title sec package
 \RequirePackage{titlesec}
@@ -64,7 +81,10 @@
     {\hspace{-4mm}\large\color{red}\bfseries#1}
 
     \newcommand{\skillentry}[2]{
-      {$\bullet$ \textbf{##1} ##2}
+      \begin{tabular}{m{.5\linewidth}l}
+       $\bullet$ \textbf{##1} &  \score{##2}
+      \end{tabular}
     }
   }
+
 
