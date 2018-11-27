@@ -53,14 +53,18 @@
   \newcommand{\email}[1]{\Email: #1}
 
 
-  % define Education Env
+  % Environment for like Education and Hobbies and wtv
   \newenvironment{cvpart}[1]{
     \section{#1}
     \newcommand{\entry}[2]{##1 \hdashrule[.5ex]{7cm}{1pt}{1pt} ##2 }
 
   }
 
-  \newcommand{\sep}[1]{{
-   \vspace{2mm}   \large \color{red} \bfseries #1}
+  \newenvironment{skills}[1]{
+    {\hspace{-4mm}\large\color{red}\bfseries#1}
+
+    \newcommand{\skillentry}[2]{
+      {$\bullet$ \textbf{##1} ##2}
+    }
   }
 
