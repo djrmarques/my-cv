@@ -33,9 +33,9 @@
 \tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
   \begin{tikzpicture}[baseline]
     \foreach \i in {1,...,5} {
-        \pgfmathparse{(\i<=#1?"starcolor":"gray!10!white")}
+        \pgfmathparse{(\i<=#1?"starcolor":"gray!30!white")}
         \edef\starcolor{\pgfmathresult}
-        \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
+        \draw (\i*1.75ex,0) node[name=star\i,circle,fill=\starcolor, inner sep=2.5pt, draw]  {};
    }
   \end{tikzpicture}
 }
@@ -56,11 +56,15 @@
 \RequirePackage{titling}
 
  % Define Layout Environment
-\newcommand{\topinfo}{
+\newcommand{\topinfo}[1]{
   \begin{center}
   {\Huge \bfseries \color{titleblack} \theauthor}\\
-  {\Large \bfseries \color{gray} Mechanical Engineer}
   \end{center}
+
+  \flushright{\color{transptext} \bfseries \thetitle}
+
+  \flushleft{#1}
+
   }
 
   % Environment for like Education and Hobbies and wtv
@@ -79,8 +83,9 @@
     }
   
   % Personal Info
-  \newcommand{\phone}[1]{\Mobilefone: #1\\}
+  \newcommand{\phone}[1]{\Mobilefone: #1}
   \newcommand{\email}[1]{\Email: #1}
+  \newcommand{\nationality}[1]{\textbf{Nacionality}: #1}
 
   \newenvironment{skills}[1]{
     \vspace{5mm}
@@ -90,6 +95,10 @@
       \begin{tabular}{m{.5\linewidth}l}
        $\bullet$ \textbf{##1} &  \score{##2}
       \end{tabular}
+    }
+
+    \newcommand{\unratedskill}[1]{
+       $\bullet$ \textbf{##1}
     }
   }
 

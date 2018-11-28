@@ -7,16 +7,24 @@
 
 \begin{document}
 \pagenumbering{gobble}          % No page numbering
-\topinfo                        % Name and stuff
+\topinfo{
+  Recent graduate looking for jobs in Data Science/Machine learning field. Highly motivated and very self-taught.
+}                        % Name and stuff
+
+\vspace{4mm}
 
 \begin{tabular}{l|l}
-\begin{minipage}[c]{.35\linewidth}
+\begin{minipage}[t][][b]{.35\linewidth}
     \includegraphics[width=\textwidth]{figures/personal} % Picture
 
     \vspace{2mm}
 
     \begin{skills}{Info}
+
+    \nationality{Portuguese}
+
     \phone{+351 962 154 064}
+
     \email{davidmarques856@gmail.com}
     \end{skills}
     % Here is the info
@@ -70,43 +78,47 @@
 
     \begin{skills}{General Skills}
       
-    TeamWorking
+    \unratedskill{TeamWorking}
+
+    \unratedskill{Communication}
+
 
     \end{skills}
 
 
 \end{minipage}&
-\begin{minipage}{.65\linewidth}
+\begin{minipage}[t][][t]{.65\linewidth}
 
   % Education Bit
   \begin{cvpart}{Education}
-    \experience{Mechanical Engineering Masters}{2011-2018}{Instituto Superior T\'{e}cnico, Lisboa, Portugal}
+    \experience{Mechanical Engineering Masters}{2011-2018}{Energy Department. \\ Instituto Superior T\'{e}cnico, Lisboa, Portugal.}
   \end{cvpart}
 
   \begin{cvpart}{Extracurricular Activities}
     \experience{JUNITEC}{2016-2017}{
-      University's Junior Company. Member of the technical department, working directly in projects.}
+      University's Junior Company. Member of the technical department, member of a team working directly in a project.}
 
     \experience{University Grant}{2017-2018}{
-      Monitoring a laboratory equipped with computers with software, used by students. Functions included guaranteeing good study conditions and proving support to other students regarding the usage of software related with programming, \emph{CAD}, and \emph{FEM}. \\
-      In charge of the networking, software and hardware maintenance.
+      Monitor of laboratory equipped with computers with technical software, used by students. Functions included guaranteeing good study conditions and proving support to other students regarding the usage of software related with programming, \emph{CAD}, and \emph{FEM}. \\
+      Networking, software and hardware maintenance.
 
     }
   \end{cvpart}
 
   \begin{cvpart}{Notable Projects}
-    \project{Master's Dissertation}{}
+    \project{Master's Dissertation}{
+      Intelligent thermal comfort controler capable of adapting to a office user's preference and autonomously managing the ventilation system.  \\ Reinforcement Learning. 
+    }
 
-    \project{Techstorm}{}
+    \project{Techstorm}{
+      Hackathon with 24 hours to develop an enelctronic product and a 3 min pitch by the end. The team was awarded the second place.
+    }
 
-    \project{Biogamming}{}
+    \project{Biogamming}{
+      \emph{EMG} based arduino application with the objective of controling a video game with muscle movement.
+    }
 
   \end{cvpart}
-
-  \begin{cvpart}{Hobies and interests}
-    
-  \end{cvpart}
-  
 \end{minipage}
 \end{tabular}
 
