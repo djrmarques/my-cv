@@ -5,10 +5,12 @@
 
 % Define the colors
 \RequirePackage{xcolor}
-\definecolor{rightcolor}{HTML}{44B3C2}
-\definecolor{leftcolor}{HTML}{E45641}
-\definecolor{titleblack}{HTML}{5D4C46}
-\definecolor{starcolor}{HTML}{F1A94E}
+\definecolor{rightcolor}{HTML}{0f7173}
+\definecolor{leftcolor}{HTML}{f05d5e}
+\definecolor{titleblack}{HTML}{272932}
+\definecolor{starcolor}{HTML}{d8a47f}
+\definecolor{transptext}{HTML}{808080}
+
 
 % Array for tabular
 \RequirePackage{array}
@@ -31,7 +33,7 @@
 \tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
   \begin{tikzpicture}[baseline]
     \foreach \i in {1,...,5} {
-        \pgfmathparse{(\i<=#1?"starcolor":"gray!40!white")}
+        \pgfmathparse{(\i<=#1?"starcolor":"gray!10!white")}
         \edef\starcolor{\pgfmathresult}
         \draw (\i*1.75ex,0) node[name=star\i,scorestars,fill=\starcolor]  {};
    }
@@ -41,7 +43,7 @@
 % Title sec package
 \RequirePackage{titlesec}
 \titleformat{\section}         % Customise the \section command 
-  {\Large\scshape\color{rightcolor}\bfseries\raggedright} % Make the \section headers large (\Large),
+  {\huge\scshape\color{rightcolor}\bfseries\raggedright} % Make the \section headers large (\Large),
                                % small capitals (\scshape) and left aligned (\raggedright)
   {}{0em}                      % Can be used to give a prefix to all sections, like 'Section ...'
   {}                           % Can be used to insert code before the heading
@@ -64,7 +66,16 @@
   % Environment for like Education and Hobbies and wtv
   \newenvironment{cvpart}[1]{
     \section{#1}
-    \newcommand{\experience}[2]{\textbf{##1} \dotfill ##2}
+    \newcommand{\experience}[3]{\large \textbf{##1} \dotfill ##2 \\ {\color{transptext} ##3}
+      \vspace{2mm}
+    }
+
+    \newcommand{\project}[2]{\large \textbf{##1} \\ {\color{transptext} ##2}
+      \vspace{2mm}
+    }
+
+    
+    \vspace{2mm}
     }
   
   % Personal Info
