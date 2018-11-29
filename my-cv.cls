@@ -88,7 +88,7 @@
   \newcommand{\nationality}[1]{\textbf{Nacionality}: #1}
 
   \newenvironment{skills}[1]{
-    \vspace{5mm}
+    \vspace{1mm}
     {\hspace{-5mm}\vspace{1mm}\Large\color{leftcolor}\bfseries#1}
 
     \newcommand{\skillentry}[2]{
