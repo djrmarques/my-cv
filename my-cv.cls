@@ -61,7 +61,7 @@
   {\Huge \bfseries \color{titleblack} \theauthor}\\
   \end{center}
 
-  \flushright{\color{transptext} \bfseries \thetitle}
+  \flushright{\color{transptext!60!white} \bfseries \thetitle}
 
   \flushleft{#1}
 
