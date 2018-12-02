@@ -29,7 +29,7 @@
 
 \newcommand\score[1]{
 \pgfmathsetmacro\pgfxa{#1+1}
-\tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
+% \tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
   \begin{tikzpicture}[baseline]
     \foreach \i in {1,...,5} {
         \pgfmathparse{(\i<=#1?"starcolor":"gray!30!white")}
@@ -90,7 +90,7 @@
 
     \newcommand{\skillentry}[2]{
       \begin{tabular}{m{.5\linewidth}l}
-       $\bullet$ \textbf{##1} &  \score{##2}
+       $\bullet$ \textbf{##1}&\raisebox{1.5mm}{\score{##2}}
       \end{tabular}
     }
 
