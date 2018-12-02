@@ -11,7 +11,6 @@
 \definecolor{starcolor}{HTML}{d8a47f}
 \definecolor{transptext}{HTML}{808080}
 
-
 % Array for tabular
 \RequirePackage{array}
 
@@ -19,7 +18,7 @@
 \RequirePackage{graphicx}
 
 % Margins
-\RequirePackage[a4paper, total={6in, 10in}]{geometry}
+\RequirePackage[a4paper, total={6in, 8.5in}]{geometry}
 
 % Dashed Rule
 \RequirePackage{dashrule}
