@@ -18,7 +18,7 @@
 \RequirePackage{graphicx}
 
 % Margins
-\RequirePackage[a4paper, total={6in, 8.5in}]{geometry}
+\RequirePackage[a4paper, total={6in, 9in}]{geometry}
 
 % Dashed Rule
 \RequirePackage{dashrule}
@@ -76,7 +76,6 @@
     \newcommand{\project}[2]{\large \textbf{##1} \\ {\color{transptext} ##2}
       \vspace{2mm}
     }
-
     
     \vspace{2mm}
     }
@@ -87,8 +86,7 @@
   \newcommand{\nationality}[1]{\textbf{Nacionality}: #1}
 
   \newenvironment{skills}[1]{
-    \vspace{1mm}
-    {\hspace{-5mm}\vspace{1mm}\Large\color{leftcolor}\bfseries#1}
+    {\hspace{-5mm}\Large\color{leftcolor}\bfseries#1}
 
     \newcommand{\skillentry}[2]{
       \begin{tabular}{m{.5\linewidth}l}
