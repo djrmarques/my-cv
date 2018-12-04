@@ -19,7 +19,7 @@
 \RequirePackage{graphicx}
 
 % Margins
-\RequirePackage[a4paper, total={6in, 9in}]{geometry}
+\RequirePackage[a4paper, total={6in, 10in}]{geometry}
 
 % Dashed Rule
 \RequirePackage{dashrule}
