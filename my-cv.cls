@@ -10,6 +10,7 @@
 \definecolor{titleblack}{HTML}{272932}
 \definecolor{starcolor}{HTML}{d8a47f}
 \definecolor{transptext}{HTML}{808080}
+\definecolor{devskill}{HTML}{272932}
 
 % Array for tabular
 \RequirePackage{array}
@@ -60,8 +61,6 @@
   {\Huge \bfseries \color{titleblack} \theauthor}\\
   \end{center}
 
-  \flushright{\color{transptext!60!white} \bfseries \thetitle}
-
   \flushleft{#1}
 
   }
@@ -69,15 +68,17 @@
   % Environment for like Education and Hobbies and wtv
   \newenvironment{cvpart}[1]{
     \section{#1}
-    \newcommand{\experience}[3]{\large \textbf{##1} \dotfill ##2 \\ {\color{transptext} ##3}
-      \vspace{2mm}
+    \newcommand{\experience}[3]{\vspace{2mm}
+      \large \textbf{##1} \dotfill ##2 \\ {\color{transptext} ##3}
     }
 
-    \newcommand{\project}[2]{\large \textbf{##1} \\ {\color{transptext} ##2}
-      \vspace{2mm}
+    \newcommand{\project}[2]{\vspace{2mm} \large \textbf{##1} \\ {\color{transptext} ##2}
+    }
+
+    \newcommand{\devskills}[1]{
+      {\\ \small \color{devskill} \textbf{Skills:} ##1}
     }
     
-    \vspace{2mm}
     }
   
   % Personal Info
