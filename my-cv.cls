@@ -11,7 +11,6 @@
 \definecolor{starcolor}{HTML}{d8a47f}
 \definecolor{transptext}{HTML}{808080}
 
-
 % Array for tabular
 \RequirePackage{array}
 
@@ -19,7 +18,7 @@
 \RequirePackage{graphicx}
 
 % Margins
-\RequirePackage[a4paper, total={6in, 10in}]{geometry}
+\RequirePackage[a4paper, total={6in, 9in}]{geometry}
 
 % Dashed Rule
 \RequirePackage{dashrule}
@@ -30,7 +29,7 @@
 
 \newcommand\score[1]{
 \pgfmathsetmacro\pgfxa{#1+1}
-\tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
+% \tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
   \begin{tikzpicture}[baseline]
     \foreach \i in {1,...,5} {
         \pgfmathparse{(\i<=#1?"starcolor":"gray!30!white")}
@@ -61,7 +60,7 @@
   {\Huge \bfseries \color{titleblack} \theauthor}\\
   \end{center}
 
-  \flushright{\color{transptext} \bfseries \thetitle}
+  \flushright{\color{transptext!60!white} \bfseries \thetitle}
 
   \flushleft{#1}
 
@@ -77,7 +76,6 @@
     \newcommand{\project}[2]{\large \textbf{##1} \\ {\color{transptext} ##2}
       \vspace{2mm}
     }
-
     
     \vspace{2mm}
     }
@@ -88,12 +86,11 @@
   \newcommand{\nationality}[1]{\textbf{Nacionality}: #1}
 
   \newenvironment{skills}[1]{
-    \vspace{1mm}
-    {\hspace{-5mm}\vspace{1mm}\Large\color{leftcolor}\bfseries#1}
+    {\hspace{-5mm}\Large\color{leftcolor}\bfseries#1}
 
     \newcommand{\skillentry}[2]{
       \begin{tabular}{m{.5\linewidth}l}
-       $\bullet$ \textbf{##1} &  \score{##2}
+       $\bullet$ \textbf{##1}&\raisebox{1.5mm}{\score{##2}}
       \end{tabular}
     }
 
