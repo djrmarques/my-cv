@@ -5,10 +5,10 @@
 
 % Define the colors
 \RequirePackage{xcolor}
-\definecolor{rightcolor}{HTML}{0f7173}
-\definecolor{leftcolor}{HTML}{f05d5e}
-\definecolor{titleblack}{HTML}{272932}
-\definecolor{starcolor}{HTML}{d8a47f}
+\definecolor{rightcolor}{HTML}{195F7E}
+\definecolor{leftcolor}{HTML}{E64230}
+\definecolor{titleblack}{HTML}{103657}
+\definecolor{starcolor}{HTML}{DCAB38}
 \definecolor{transptext}{HTML}{808080}
 \definecolor{devskill}{HTML}{272932}
 
@@ -19,7 +19,7 @@
 \RequirePackage{graphicx}
 
 % Margins
-\RequirePackage[a4paper, total={6in, 10in}]{geometry}
+\RequirePackage[a4paper, total={6in, 10.5in}]{geometry}
 
 % Dashed Rule
 \RequirePackage{dashrule}
@@ -30,7 +30,6 @@
 
 \newcommand\score[1]{
 \pgfmathsetmacro\pgfxa{#1+1}
-% \tikzstyle{scorestars}=[star, star points=5, star point ratio=2, draw,inner sep=1.3pt,anchor=outer point 3]
   \begin{tikzpicture}[baseline]
     \foreach \i in {1,...,5} {
         \pgfmathparse{(\i<=#1?"starcolor":"gray!30!white")}
