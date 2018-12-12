@@ -5,12 +5,13 @@
 
 % Define the colors
 \RequirePackage{xcolor}
-\definecolor{rightcolor}{HTML}{195F7E}
-\definecolor{leftcolor}{HTML}{E64230}
-\definecolor{titleblack}{HTML}{103657}
-\definecolor{starcolor}{HTML}{DCAB38}
-\definecolor{transptext}{HTML}{808080}
+\definecolor{titleblack}{HTML}{273D5D}
+\definecolor{rightcolor}{HTML}{676D8B}
+\definecolor{leftcolor}{HTML}{7D8CA7}
+\definecolor{starcolor}{HTML}{C57A6B}
+\definecolor{transptext}{HTML}{585858}
 \definecolor{devskill}{HTML}{272932}
+
 
 % Array for tabular
 \RequirePackage{array}
@@ -75,7 +76,7 @@
     }
 
     \newcommand{\devskills}[1]{
-      {\\ \small \color{devskill} \textbf{Skills:} ##1}
+      {\\ \small \bfseries \color{devskill} \textbf{Skills:} ##1}
     }
     
     }
