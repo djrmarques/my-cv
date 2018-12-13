@@ -12,6 +12,11 @@
 \definecolor{transptext}{HTML}{585858}
 \definecolor{devskill}{HTML}{272932}
 
+% Fontawesome
+\RequirePackage{fontawesome}
+
+%URL
+\RequirePackage{hyperref}
 
 % Array for tabular
 \RequirePackage{array}
@@ -21,9 +26,6 @@
 
 % Margins
 \RequirePackage[a4paper, total={6in, 10.5in}]{geometry}
-
-% Dashed Rule
-\RequirePackage{dashrule}
 
   % STARS
 \RequirePackage{tikz}
