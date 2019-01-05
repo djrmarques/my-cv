@@ -98,7 +98,9 @@
     }
 
     \newcommand{\unratedskill}[1]{
-       $\bullet$ \textbf{##1}
+      \begin{tabular}{m{.5\linewidth}l}
+       $\bullet$ \textbf{##1}&
+      \end{tabular}
     }
   }
 
