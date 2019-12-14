@@ -1,3 +1,4 @@
+figures/
 /*.fdb_latexmk
 *.aux
 *.glo
@@ -23,3 +24,4 @@
 *.mtc1
 *.out
 *.synctex.gz
+.auctex-auto/

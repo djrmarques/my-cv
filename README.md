@@ -1,2 +1,2 @@
-# Just my CV
-Attempting at creating my own cv latex class
+# Custom Latex CV Class
+Custom latex cv class. 
